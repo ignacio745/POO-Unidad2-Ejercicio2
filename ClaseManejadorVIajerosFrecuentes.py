@@ -31,6 +31,7 @@ class ManejadorViajerosFrecuentes:
                 print("[ERROR] No se pudo agregar un viajero")
             total +=1
         print("Se cargaron {0} de {1} viajeros".format(agregados, total))
+        archivo.close()
 
     
     def listarViajeros(self):
@@ -95,3 +96,4 @@ class ManejadorViajerosFrecuentes:
             if isinstance(unViajero, ViajeroFrecuente):
                 datos = [unViajero.getNumero(), unViajero.getDNI(), unViajero.getNombre(), unViajero.getApellido(), unViajero.getMillas()]
                 writer.writerow(datos)
+        archivo.close()
